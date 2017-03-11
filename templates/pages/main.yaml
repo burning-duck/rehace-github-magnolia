@@ -1,0 +1,11 @@
+title: REMACE Main Template
+templateScript: /remace/templates/pages/main.ftl
+renderType: freemarker
+dialog: remace:pages/main
+visible: true
+areas:
+  issues-area:
+    renderType: freemarker
+    availableComponents:
+      remace-issues:
+        id: remace:components/remace-issues
