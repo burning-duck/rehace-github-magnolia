@@ -1,9 +1,27 @@
-import React from 'react'
+// Cerebral
+import {Controller} from 'cerebral'
+import Devtools from 'cerebral/devtools'
 
-import 'semantic-ui-css/semantic.css'
+// ReMaCe
+import Remace from './remace'
 
-const Page = () => (
-    <h1>Page 3</h1>
-)
+// Components to register
+import ProjectPage from './components/ProjectPage'
 
-export default Page
+import 'semantic-ui-css/semantic.min.css'
+
+// Connect everything
+Remace({
+    controller: Controller({
+        devtools: Devtools({
+            remoteDebugger: 'localhost:8585'
+        }),
+        state: {
+            title: 'ReMaCe - State Title'
+        }
+    }),
+    components: {
+        'FooProjectPage': ProjectPage
+    }
+})
+
