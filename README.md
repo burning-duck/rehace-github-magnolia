@@ -1,9 +1,9 @@
-# remace
+# ReMaCe - ReactMagnoliaCerebral
 
-<!--
-Provide a one sentence description of what your light module
-provides.
--->
+A sample of how to integrate single-page technologies in a multi-page CMS.
+ 
+
+ 
 
 
 ## Features
@@ -17,6 +17,32 @@ component dialog.
 
 
 ## Usage
+
+
+### npm run
+
+```
+npm run start
+```
+- clean
+- Watch all files in `_dev` for changes.
+- Saves build bundles in `webreources`
+- Start a livereload server on default port 35729
+
+
+```
+npm run build
+```
+- clean
+- Builds a bundle from `_dev`.
+- Saves build bundles in `webreources`
+
+
+```
+npm run clean
+```
+- Deletes `webresources`
+
 
 <!--
 Provide details about how a developer can make the component template,
