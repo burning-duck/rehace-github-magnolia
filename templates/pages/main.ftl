@@ -9,11 +9,13 @@
     <meta name="keywords" content="${content.keywords!""}"/>
     <link rel="stylesheet" type="text/css" href="${ctx.contextPath}/.resources/remace/webresources/remace-bundle.css" media="all"/>
 </head>
-<body class="main ${cmsfn.language()}">
+<body>
+[#--  --]
+<div data-component="FooProjectPage" data-prop-dialog-title="${content.title!}"></div>
 
 <div class="container ">
     <h1>main works!</h1>
-    <div data-component="FooProjectPage" data-prop-dialog-title="${content.title!}"></div>
+
 </div>
 
 <script src="${ctx.contextPath}/.resources/remace/webresources/remace-bundle.js"></script>

@@ -12,7 +12,9 @@ export default function RemaceContainer ({controller, components}) {
     const container = new ReactHabitat.Container()
 
     Object.keys(components).forEach((key) => {
-        container.register(key, connect(components[key]))
+        const connectedComponent = connect(components[key])
+        container.register(key, connectedComponent)
+        console.log('Register component', key, connectedComponent)
     })
 
     return container
