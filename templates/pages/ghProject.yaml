@@ -1,0 +1,11 @@
+title: ReMaCe - GitHub Project Page
+templateScript: /remace/templates/pages/ghProject.ftl
+renderType: freemarker
+dialog: remace:pages/ghProject
+visible: true
+
+areas:
+  headerArea:
+    availableComponents:
+      pageHeader:
+        id: remace:components/pageHeader

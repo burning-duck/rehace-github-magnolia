@@ -1,0 +1,4 @@
+title: pageHeader
+renderType: freemarker
+templateScript: /remace/templates/components/pageHeader.ftl
+dialog: remace:components/pageHeader

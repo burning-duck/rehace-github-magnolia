@@ -1,0 +1,60 @@
+# Automatically generated dialog with few most often used fileds (text, right, link, DAM image, multivalue, link to app, select). Feel free to modify them for your specific component.
+
+form:
+  label: foo
+  tabs:
+    - name: tabMain
+      label: Main
+      fields:
+
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+          
+        - name: image
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Image
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+
+        - name: desc
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Description
+
+        - name: internalLink
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: website
+          appName: pages
+          label: Select page
+          identifierToPathConverter:
+            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+
+        - name: categories
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Select category
+          field:
+            name: linkField
+            class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+            targetWorkspace: category
+            appName: categories
+            identifierToPathConverter:
+              class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+
+        - name: option
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Option
+          options:
+            - name: a
+              value: a
+            - name: b
+              value: b
+
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition
