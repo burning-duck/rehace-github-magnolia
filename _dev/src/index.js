@@ -19,29 +19,28 @@ import 'semantic-ui-css/semantic.min.css'
 
 // Connect everything
 Remace({
-    controller: Controller({
-        devtools: Devtools({
-            remoteDebugger: 'localhost:8585'
-        }),
-        state: {
-            title: 'ReMaCe - State Title'
-        },
-        modules: {
-            gh
-        },
-        providers: [
-            HttpProvider({
-                baseUrl: 'https://api.github.com',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json'
-                }
-            })
-        ]
+  controller: Controller({
+    devtools: Devtools({
+      remoteDebugger: 'localhost:8585'
     }),
-    components: {
-        'RegisterProject': RegisterProject,
-        'RepoHeader': RepoHeader,
-        'PageHeader': PageHeader
-    }
+    state: {
+      title: 'ReMaCe - State Title'
+    },
+    modules: {
+      gh
+    },
+    providers: [
+      HttpProvider({
+        baseUrl: 'https://api.github.com',
+        headers: {
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      })
+    ]
+  }),
+  components: {
+    'RegisterProject': RegisterProject,
+    'RepoHeader': RepoHeader,
+    'PageHeader': PageHeader
+  }
 })
-
