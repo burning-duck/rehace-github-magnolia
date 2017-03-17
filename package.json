@@ -24,16 +24,17 @@
     "react-dom": "^15.4.2",
     "react-habitat": "^0.4.2",
     "rimraf": "^2.6.1",
-    "semantic-ui-css": "^2.2.9",
-    "semantic-ui-react": "^0.67.0",
     "style-loader": "^0.13.2",
     "webpack": "^2.2.1",
-    "webpack-livereload-plugin": "^0.10.0"
+    "webpack-livereload-plugin": "^0.10.0",
+    "npm-run-all": "^4.0.2"
   },
   "scripts": {
     "clean": "rimraf ./webresources",
-    "build": "npm run clean && cross-env NODE_ENV=production webpack --config=_dev/webpack.config.js",
-    "start": "npm run clean && cross-env NODE_ENV=development webpack --config=_dev/webpack.config.js --watch",
-    "lint": "eslint _dev/src/**"
+    "build": "npm-run-all clean lint build:webpack",
+    "start": "npm-run-all clean start:webpack",
+    "lint": "eslint _dev/src/**",
+    "build:webpack": "cross-env NODE_ENV=production webpack --config=_dev/webpack.config.js",
+    "start:webpack": "cross-env NODE_ENV=development webpack --config=_dev/webpack.config.js --watch"
   }
 }

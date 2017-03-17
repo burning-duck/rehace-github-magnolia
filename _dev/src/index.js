@@ -11,11 +11,7 @@ import gh from './gh'
 
 // Components to register
 import RegisterProject from './gh/components/RegisterProject'
-import RepoHeader from './gh/components/repo/RepoHeader'
 import PageHeader from './gh/components/PageHeader'
-
-// Add some styles
-import 'semantic-ui-css/semantic.min.css'
 
 // Connect everything
 Remace({
@@ -40,7 +36,6 @@ Remace({
   }),
   components: {
     'RegisterProject': RegisterProject,
-    'RepoHeader': RepoHeader,
     'PageHeader': PageHeader
   }
 })

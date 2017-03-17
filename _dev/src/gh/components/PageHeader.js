@@ -2,32 +2,25 @@ import React from 'react'
 import {connect} from 'cerebral/react'
 import computed from '../computed'
 
-import {Header, Segment} from 'semantic-ui-react'
-
 const PageHeader = connect(
   {
     repo: computed.currentRepo
   },
-  ({repo, title, description, overwrite, icon, inverted, textAlign}) => {
-    const headerProps = {
-      content: title,
-      subheader: description,
-      inverted: inverted,
-      textAlign: textAlign
-    }
-    if (icon) {
-      headerProps['icon'] = icon
+  ({repo, title, description, overwrite}) => {
+    const header = {
+      title,
+      description
     }
     if (overwrite && repo) {
-      headerProps['content'] = repo['full_name']
-      headerProps['subheader'] = repo['description']
+      header['title'] = repo['full_name']
+      header['description'] = repo['description']
     }
-    console.log('HeaderProps', headerProps)
 
     return (
-      <Segment inverted={inverted} basic textAlign={textAlign}>
-        <Header {...headerProps} />
-      </Segment>
+      <header>
+        <h1>{header.title}</h1>
+        <h2>{header.description}</h2>
+      </header>
     )
   }
 )
