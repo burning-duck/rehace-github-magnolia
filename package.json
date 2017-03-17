@@ -14,27 +14,28 @@
     "eslint": "^3.17.1",
     "eslint-config-standard": "^7.0.1",
     "eslint-config-standard-react": "^4.3.0",
+    "eslint-loader": "^1.6.3",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^6.10.0",
     "eslint-plugin-standard": "^2.1.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
+    "npm-run-all": "^4.0.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-habitat": "^0.4.2",
     "rimraf": "^2.6.1",
     "style-loader": "^0.13.2",
     "webpack": "^2.2.1",
-    "webpack-livereload-plugin": "^0.10.0",
-    "npm-run-all": "^4.0.2"
+    "webpack-livereload-plugin": "^0.10.0"
   },
   "scripts": {
     "clean": "rimraf ./webresources",
     "build": "npm-run-all clean lint build:webpack",
-    "start": "npm-run-all clean start:webpack",
+    "start": "npm-run-all clean --parallel start:webpack",
     "lint": "eslint _dev/src/**",
-    "build:webpack": "cross-env NODE_ENV=production webpack --config=_dev/webpack.config.js",
+    "build:webpack": "cross-env NODE_ENV=production webpack --optimize-minimize  --config=_dev/webpack.config.js",
     "start:webpack": "cross-env NODE_ENV=development webpack --config=_dev/webpack.config.js --watch"
   }
 }
