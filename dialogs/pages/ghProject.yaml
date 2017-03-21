@@ -27,7 +27,7 @@ form:
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           i18n: false
           label: GitHub Owner
-        - name: repository
+        - name: repo
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           i18n: false
           label: GitHub Repository

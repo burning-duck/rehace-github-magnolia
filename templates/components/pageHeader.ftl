@@ -1,4 +1,3 @@
-
 [#assign title = content.title?has_content?then(content.title, "")]
 [#assign description = content.description?has_content?then(content.description, "")]
 [#assign overwrite = content.overwrite?has_content?then(content.overwrite?then("true", "false"), "false")]
@@ -8,12 +7,9 @@
 [#assign inverted = content.inverted?has_content?then(content.inverted?then("true", "false"), "false")]
 
 
-<div data-component="PageHeader"
+<div data-component="RemaceProjectHeader"
      data-prop-title="${title}"
      data-prop-description="${description}"
      data-prop-overwrite="${overwrite}"
-     data-prop-icon="${icon}"
-     data-prop-inverted="${inverted}"
-     data-prop-text-align="${textAlign}"
 >
 </div>

@@ -1,4 +1,0 @@
-title: foo
-renderType: freemarker
-templateScript: /remace/templates/components/foo.ftl
-dialog: remace:components/foo
