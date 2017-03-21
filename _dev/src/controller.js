@@ -2,6 +2,9 @@ import {Controller} from 'cerebral'
 import HttpProvider from 'cerebral-provider-http'
 import Devtools from 'cerebral/devtools'
 
+// Signals
+import projectRegistered from './signals/projectRegistered'
+
 /**
  * The Cerebral Controller.
  */
@@ -10,7 +13,13 @@ export default Controller({
     remoteDebugger: 'localhost:8585'
   }),
   state: {
-    title: 'ReMaCe - State Title'
+    title: 'ReMaCe - State Title',
+    projects: {},
+    repos: {},
+    selected: null
+  },
+  signals: {
+    projectRegistered: projectRegistered
   },
   providers: [
     HttpProvider({

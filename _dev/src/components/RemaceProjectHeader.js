@@ -1,13 +1,22 @@
 import React from 'react'
 import {connect} from 'cerebral/react'
+import selectedRepo from '../computed/selectedRepo'
 
-import currentRepo from '../computed/currentRepo'
 import Header from './Header'
 
 /**
  * Display a header connected to state.
+ *
+ * Uses first project.
  */
-const CurrentProjectHeader = connect(currentRepo, Header)
+const CurrentProjectHeader = connect({
+  repo: selectedRepo
+}, ({title, description, repo}) => {
+  const hasRepo = !!repo
+  return (
+    <Header title={hasRepo ? repo['name'] : title} subtitle={hasRepo ? repo['description'] : description} />
+  )
+})
 
 /**
  * Display a header.
@@ -17,7 +26,7 @@ const CurrentProjectHeader = connect(currentRepo, Header)
  */
 const RemaceProjectHeader = ({title, description, overwrite}) => {
   if (overwrite) {
-    return (<CurrentProjectHeader />)
+    return (<CurrentProjectHeader title={title} subtitle={description} />)
   }
   return (<Header title={title} subtitle={description} />)
 }

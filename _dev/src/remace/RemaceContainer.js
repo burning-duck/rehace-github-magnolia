@@ -14,7 +14,6 @@ export default function RemaceContainer ({controller, components}) {
   Object.keys(components).forEach((key) => {
     const connectedComponent = connect(components[key])
     container.register(key, connectedComponent)
-    console.log('Register component', key, connectedComponent)
   })
 
   return container
