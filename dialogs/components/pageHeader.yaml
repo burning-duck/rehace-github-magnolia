@@ -21,29 +21,6 @@ form:
           buttonLabel: Overwrite with page project data?
           description: If checked, title and description are taken from current project data.
 
-        - name: inverted
-          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
-          label: Inverted
-          buttonLabel: Use inverted UI?
-
-        - name: icon
-          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
-          label: Icon
-          description: Use an icon from semantic-ui.
-
-        - name: textAlign
-          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
-          label: Text Align
-          options:
-            - name: Left
-              value: left
-            - name: Center
-              value: center
-            - name: Right
-              value: right
-            - name: Justified
-              value: justified
-
 
 actions:
   commit:

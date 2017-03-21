@@ -1,47 +1,19 @@
-// Cerebral
-import {Controller} from 'cerebral'
-import HttpProvider from 'cerebral-provider-http'
-import Devtools from 'cerebral/devtools'
-
-// ReMaCe
 import Remace from './remace'
+import controller from './controller'
 
-// Modules
-import gh from './gh'
+// Global components to register
+import RemaceProjectRegistration from './components/RemaceProjectRegistration'
+import RemaceProjectHeader from './components/RemaceProjectHeader'
+import RemaceProjectMetric from './components/RemaceProjectMetric'
 
-// Components to register
-import RegisterProject from './gh/components/RegisterProject'
-import RepoHeader from './gh/components/repo/RepoHeader'
-import PageHeader from './gh/components/PageHeader'
-
-// Add some styles
-import 'semantic-ui-css/semantic.min.css'
-
-// Connect everything
-Remace({
-    controller: Controller({
-        devtools: Devtools({
-            remoteDebugger: 'localhost:8585'
-        }),
-        state: {
-            title: 'ReMaCe - State Title'
-        },
-        modules: {
-            gh
-        },
-        providers: [
-            HttpProvider({
-                baseUrl: 'https://api.github.com',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json'
-                }
-            })
-        ]
-    }),
-    components: {
-        'RegisterProject': RegisterProject,
-        'RepoHeader': RepoHeader,
-        'PageHeader': PageHeader
-    }
+/**
+ * Connect components to controller and make them globally available.
+ */
+export default Remace({
+  controller: controller,
+  components: {
+    'RemaceProjectRegistration': RemaceProjectRegistration,
+    'RemaceProjectHeader': RemaceProjectHeader,
+    'RemaceProjectMetric': RemaceProjectMetric
+  }
 })
-

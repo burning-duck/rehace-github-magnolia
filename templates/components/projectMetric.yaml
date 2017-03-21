@@ -1,0 +1,4 @@
+title: projectMetric
+renderType: freemarker
+templateScript: /remace/templates/components/projectMetric.ftl
+dialog: remace:components/projectMetric

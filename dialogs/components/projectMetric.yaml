@@ -1,0 +1,36 @@
+# Automatically generated dialog with few most often used fileds (text, right, link, DAM image, multivalue, link to app, select). Feel free to modify them for your specific component.
+
+form:
+  label: projectMetric
+  tabs:
+    - name: tabMain
+      label: Main
+      fields:
+
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+        - name: metric
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Metric
+          options:
+            - name: size
+              value: size
+            - name: stargazers
+              value: stargazers_count
+            - name: forks
+              value: forks_count
+            - name: network
+              value: network_count
+            - name: openIssues
+              value: open_issues_count
+            - name: subscribers
+              value: subscribers_count
+            - name: watchers
+              value: watchers_count
+
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

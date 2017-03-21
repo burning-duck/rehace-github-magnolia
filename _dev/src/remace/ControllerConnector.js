@@ -7,14 +7,14 @@
 import React from 'react'
 import {Container} from 'cerebral/react'
 
-export default function ControllerConnector(controller) {
-    return function ControllerConnectorHocFactory(Component) {
-        return function RemaceHocContainer(props) {
-            return (
-                <Container controller={controller}>
-                    <Component {...props} />
-                </Container>
-            )
-        }
+export default function ControllerConnector (controller) {
+  return function ControllerConnectorHocFactory (Component) {
+    return function RemaceHocContainer (props) {
+      return (
+        <Container controller={controller}>
+          <Component {...props} />
+        </Container>
+      )
     }
+  }
 }
