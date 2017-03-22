@@ -1,0 +1,6 @@
+title: projectsPage
+templateScript: /remace/templates/pages/projectsPage.ftl
+renderType: freemarker
+dialog: remace:pages/projectsPage
+visible: true
+
