@@ -37,5 +37,9 @@
     "lint": "eslint _dev/src/**",
     "build:webpack": "cross-env NODE_ENV=production webpack --optimize-minimize  --config=_dev/webpack.config.js",
     "start:webpack": "cross-env NODE_ENV=development webpack --config=_dev/webpack.config.js --watch"
+  },
+  "dependencies": {
+    "semantic-ui-css": "^2.2.9",
+    "semantic-ui-react": "^0.67.1"
   }
 }
