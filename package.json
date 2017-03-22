@@ -26,6 +26,7 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-habitat": "^0.4.2",
+    "react-number-easing": "^0.0.4",
     "rimraf": "^2.6.1",
     "style-loader": "^0.13.2",
     "webpack": "^2.2.1",

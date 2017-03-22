@@ -11,6 +11,9 @@ areas:
         id: remace:components/pageHeader
   mainArea:
     availableComponents:
-      ProjectStatistic:
+      projectMetric:
+        id: remace:components/projectMetric
+  metricsArea:
+    availableComponents:
       projectMetric:
         id: remace:components/projectMetric

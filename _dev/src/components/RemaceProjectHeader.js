@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'cerebral/react'
 import selectedRepo from '../computed/selectedRepo'
 
-import Header from './Header'
+import PageHeader from './PageHeader'
 
 /**
  * Display a header connected to state.
@@ -13,8 +13,15 @@ const CurrentProjectHeader = connect({
   repo: selectedRepo
 }, ({title, description, repo}) => {
   const hasRepo = !!repo
+  let image = null
+  if (hasRepo && repo['owner'] && repo['owner']['avatar_url']) {
+    image = repo['owner']['avatar_url']
+  }
   return (
-    <Header title={hasRepo ? repo['name'] : title} subtitle={hasRepo ? repo['description'] : description} />
+    <PageHeader title={hasRepo ? repo['name'] : title}
+                subtitle={hasRepo ? repo['description'] : description}
+                image={image}
+    />
   )
 })
 
@@ -26,9 +33,9 @@ const CurrentProjectHeader = connect({
  */
 const RemaceProjectHeader = ({title, description, overwrite}) => {
   if (overwrite) {
-    return (<CurrentProjectHeader title={title} subtitle={description} />)
+    return (<CurrentProjectHeader title={title} subtitle={description}/>)
   }
-  return (<Header title={title} subtitle={description} />)
+  return (<PageHeader title={title} subtitle={description}/>)
 }
 
 // META

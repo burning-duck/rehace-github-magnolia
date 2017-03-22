@@ -1350,6 +1350,10 @@ duplexer@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
 
+eases@^1.0.6:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/eases/-/eases-1.0.8.tgz#f1f5069a6b6ed2ea510f9c6110398d63efe9aee6"
+
 ecc-jsbn@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/ecc-jsbn/-/ecc-jsbn-0.1.1.tgz#0fc73a9ed5f0d53c38193398523ef7e543777505"
@@ -3309,6 +3313,12 @@ react-habitat@^0.4.2:
   dependencies:
     react "^15.0.0"
     react-dom "^15.0.0"
+
+react-number-easing@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-number-easing/-/react-number-easing-0.0.4.tgz#addb9b47d00803c6882463e44061e278e28b6fa9"
+  dependencies:
+    eases "^1.0.6"
 
 react@^15.0.0, react@^15.4.2:
   version "15.4.2"
