@@ -9,6 +9,7 @@
     "babel-preset-react": "^6.23.0",
     "cerebral": "2.0.0-b-alpha.39c2c242",
     "cerebral-provider-http": "1.0.0-b-alpha.39c2c242",
+    "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^3.2.3",
     "css-loader": "^0.27.1",
     "eslint": "^3.17.1",

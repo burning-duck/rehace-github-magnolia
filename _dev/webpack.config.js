@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const LiveReloadPlugin = require('webpack-livereload-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   devtool: 'source-map',
@@ -47,6 +48,13 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
     new ExtractTextPlugin('remace-bundle.css'),
-    new LiveReloadPlugin()
+    new LiveReloadPlugin(),
+    new CopyWebpackPlugin([
+      {
+        context: path.resolve(__dirname, 'public'),
+        from: `**/*`,
+        to: path.resolve(__dirname, '..', 'webresources', 'public')
+      }
+    ])
   ]
 }
