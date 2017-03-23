@@ -1,6 +1,9 @@
 import Remace from './remace'
 import controller from './controller'
 
+// Global styles
+import 'semantic-ui-css/semantic.css'
+
 // Global components to register
 import RemaceProjectRegistration from './components/RemaceProjectRegistration'
 import RemaceProjectHeader from './components/RemaceProjectHeader'
