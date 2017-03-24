@@ -1,0 +1,5 @@
+version: 0.1.0
+displayName: ReHaCe Github
+dependencies:
+  core:
+    version: 5.4.7/*
