@@ -2,7 +2,7 @@
 
 A sample of how to integrate single-page technologies in a multi-page CMS.
  
-
+[![Build status][travis-image]][travis-url]
  
 
 
@@ -68,3 +68,7 @@ https://docs.magnolia-cms.com
 
 
 ## Contributors
+
+
+[travis-image]: https://img.shields.io/travis/burning-duck/rehace-github-magnolia.svg?style=flat
+[travis-url]: https://travis-ci.org/burning-duck/rehace-github-magnolia
