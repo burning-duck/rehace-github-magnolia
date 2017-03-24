@@ -8,7 +8,7 @@ module.exports = {
   devtool: 'source-map',
   entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
-    filename: 'remace-bundle.js',
+    filename: 'rehace-github-magnolia-bundle.js',
     path: path.resolve(__dirname, '..', 'webresources')
   },
   module: {
@@ -47,7 +47,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
-    new ExtractTextPlugin('remace-bundle.css'),
+    new ExtractTextPlugin('rehace-github-magnolia-bundle.css'),
     new LiveReloadPlugin(),
     new CopyWebpackPlugin([
       {

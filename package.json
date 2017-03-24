@@ -23,6 +23,7 @@
     "url": "https://github.com/burning-duck/rehace-github-magnolia/issues"
   },
   "homepage": "https://github.com/burning-duck/rehace-github-magnolia",
+  "main": "./webresources/rehace-github-magnolia-bundle.js",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.4.0",
@@ -56,6 +57,7 @@
     "semantic-ui-react": "^0.67.1"
   },
   "scripts": {
+    "test": "npm-run-all build",
     "clean": "rimraf ./webresources",
     "build": "npm-run-all clean lint build:webpack",
     "start": "npm-run-all clean --parallel start:webpack",
