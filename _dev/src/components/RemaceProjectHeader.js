@@ -19,8 +19,8 @@ const CurrentProjectHeader = connect({
   }
   return (
     <PageHeader title={hasRepo ? repo['name'] : title}
-                subtitle={hasRepo ? repo['description'] : description}
-                image={image}
+      subtitle={hasRepo ? repo['description'] : description}
+      image={image}
     />
   )
 })
@@ -33,9 +33,9 @@ const CurrentProjectHeader = connect({
  */
 const RemaceProjectHeader = ({title, description, overwrite}) => {
   if (overwrite) {
-    return (<CurrentProjectHeader title={title} subtitle={description}/>)
+    return (<CurrentProjectHeader title={title} subtitle={description} />)
   }
-  return (<PageHeader title={title} subtitle={description}/>)
+  return (<PageHeader title={title} subtitle={description} />)
 }
 
 // META
