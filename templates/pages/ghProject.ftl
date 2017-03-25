@@ -7,7 +7,7 @@
   <title>${content.windowTitle!content.title!}</title>
   <meta name="description" content="${content.description!""}"/>
   <meta name="keywords" content="${content.keywords!""}"/>
-  <link rel="stylesheet" type="text/css" href="${ctx.contextPath}/.resources/remace/webresources/remace-bundle.css"
+  <link rel="stylesheet" type="text/css" href="${ctx.contextPath}/.resources/rehace-github-magnolia/webresources/rehace-github-magnolia-bundle.css"
         media="all"/>
   <style type="text/css">
     .main.container {
@@ -19,7 +19,7 @@
 [#-- Menu --]
 <div class="ui fixed inverted menu">
   <div class="item">
-    <img class="logo" src="${ctx.contextPath}/.resources/remace/webresources/public/assets/burning-duck-logo.png">
+    <img class="logo" src="${ctx.contextPath}/.resources/rehace-github-magnolia/webresources/public/assets/burning-duck-logo.png">
   </div>
     <a href="#" class="header item">
       ReMaCe
@@ -49,6 +49,6 @@
      data-prop-owner="${content.owner!}"
      data-prop-repo="${content.repo!}">
 </div>
-<script src="${ctx.contextPath}/.resources/remace/webresources/remace-bundle.js"></script>
+<script src="${ctx.contextPath}/.resources/rehace-github-magnolia/webresources/rehace-github-magnolia-bundle.js"></script>
 </body>
 </html>

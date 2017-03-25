@@ -1,7 +1,29 @@
 {
-  "name": "remace",
+  "name": "rehace-github-magnolia",
+  "description": "ReHaCe - Github repository components as magnolia light module.",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/burning-duck/rehace-github-magnolia.git"
+  },
+  "keywords": [
+    "magnolia-light-module",
+    "magnolia-component",
+    "cerebral",
+    "react"
+  ],
+  "author": "burning-duck",
+  "contributors": [
+    "Peter Höffling",
+    "Jan Rösler"
+  ],
+  "bugs": {
+    "url": "https://github.com/burning-duck/rehace-github-magnolia/issues"
+  },
+  "homepage": "https://github.com/burning-duck/rehace-github-magnolia",
+  "main": "./webresources/rehace-github-magnolia-bundle.js",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.4.0",
@@ -30,18 +52,17 @@
     "rimraf": "^2.6.1",
     "style-loader": "^0.13.2",
     "webpack": "^2.2.1",
-    "webpack-livereload-plugin": "^0.10.0"
+    "webpack-livereload-plugin": "^0.10.0",
+    "semantic-ui-css": "^2.2.9",
+    "semantic-ui-react": "^0.67.1"
   },
   "scripts": {
+    "test": "npm-run-all build",
     "clean": "rimraf ./webresources",
     "build": "npm-run-all clean lint build:webpack",
     "start": "npm-run-all clean --parallel start:webpack",
     "lint": "eslint _dev/src/**",
     "build:webpack": "cross-env NODE_ENV=production webpack --optimize-minimize  --config=_dev/webpack.config.js",
     "start:webpack": "cross-env NODE_ENV=development webpack --config=_dev/webpack.config.js --watch"
-  },
-  "dependencies": {
-    "semantic-ui-css": "^2.2.9",
-    "semantic-ui-react": "^0.67.1"
   }
 }

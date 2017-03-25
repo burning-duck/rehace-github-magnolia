@@ -1,4 +1,4 @@
-# ReMaCe - ReactMagnoliaCerebral
+# ReHaCe - Github repository components as magnolia light module.
 
 A sample of how to integrate single-page technologies in a multi-page CMS.
  
