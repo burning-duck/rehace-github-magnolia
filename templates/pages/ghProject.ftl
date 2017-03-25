@@ -45,7 +45,7 @@
 </div>
 
 [#-- Register project data in state --]
-<div data-component="RemaceProjectRegistration"
+<div data-component="GIthubProjectRegistration"
      data-prop-owner="${content.owner!}"
      data-prop-repo="${content.repo!}">
 </div>

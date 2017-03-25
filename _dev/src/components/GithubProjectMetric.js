@@ -14,7 +14,7 @@ const metricTargets = {
   'subscribers_count': 'watchers'
 }
 
-const RemaceProjectMetric = connect(
+const GithubProjectMetric = connect(
   {
     repo: selectedRepo
   },
@@ -41,11 +41,11 @@ const RemaceProjectMetric = connect(
 )
 
 // META
-RemaceProjectMetric.displayName = 'RemaceProjectMetric'
-RemaceProjectMetric.propTypes = {
+GithubProjectMetric.displayName = 'GithubProjectMetric'
+GithubProjectMetric.propTypes = {
   title: React.PropTypes.string.isRequired,
   metric: React.PropTypes.string.isRequired,
   repo: React.PropTypes.object
 }
 
-export default RemaceProjectMetric
+export default GithubProjectMetric

@@ -31,7 +31,7 @@ const CurrentProjectHeader = connect({
  * - use current project if overwrite is truthy.
  * - use given properties if overwrite is falthy.
  */
-const RemaceProjectHeader = ({title, description, overwrite}) => {
+const GithubProjectHeader = ({title, description, overwrite}) => {
   if (overwrite) {
     return (<CurrentProjectHeader title={title} subtitle={description} />)
   }
@@ -39,15 +39,15 @@ const RemaceProjectHeader = ({title, description, overwrite}) => {
 }
 
 // META
-RemaceProjectHeader.displayName = 'RemaceProjectHeader'
-RemaceProjectHeader.propTypes = {
+GithubProjectHeader.displayName = 'GithubProjectHeader'
+GithubProjectHeader.propTypes = {
   title: React.PropTypes.string.isRequired,
   description: React.PropTypes.string.isRequired,
   overwrite: React.PropTypes.bool.isRequired
 }
-RemaceProjectHeader.defaultProps = {
+GithubProjectHeader.defaultProps = {
   overwrite: false
 }
 
 // API
-export default RemaceProjectHeader
+export default GithubProjectHeader

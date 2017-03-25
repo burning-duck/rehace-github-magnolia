@@ -7,7 +7,7 @@
 import ReactHabitat from 'react-habitat'
 import ControllerConnector from './ControllerConnector'
 
-export default function RemaceContainer ({controller, components}) {
+export default function RehaceContainer ({controller, components}) {
   const connect = ControllerConnector(controller)
   const container = new ReactHabitat.Container()
 

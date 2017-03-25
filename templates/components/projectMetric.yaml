@@ -1,4 +1,4 @@
 title: projectMetric
 renderType: freemarker
-templateScript: /remace/templates/components/projectMetric.ftl
-dialog: remace:components/projectMetric
+templateScript: /rehace-github-magnolia/templates/components/projectMetric.ftl
+dialog: rehace-github-magnolia:components/projectMetric

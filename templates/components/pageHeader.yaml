@@ -1,4 +1,4 @@
 title: pageHeader
 renderType: freemarker
-templateScript: /remace/templates/components/pageHeader.ftl
-dialog: remace:components/pageHeader
+templateScript: /rehace-github-magnolia/templates/components/pageHeader.ftl
+dialog: rehace-github-magnolia:components/pageHeader

@@ -1,4 +1,4 @@
 /**
  * Reexport the main module.
  */
-export {default} from './Remace'
+export {default} from './Rehace'
