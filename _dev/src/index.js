@@ -10,7 +10,6 @@ import GithubProjectHeader from './components/GithubProjectHeader'
 import GithubProjectMetric from './components/GithubProjectMetric'
 import GithubProjectList from './components/GithubProjectList'
 
-
 /**
  * Connect components to controller and make them globally available.
  */

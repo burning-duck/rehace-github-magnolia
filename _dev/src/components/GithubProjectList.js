@@ -26,9 +26,9 @@ const GithubProjectList = connect(
   ({repos}) => {
     return (
       <ul>
-        <li>MENU</li>
+        <li>Projects</li>
         {repos.map((key) => (
-          <ProjectListItem key={key} projectId={key}/>
+          <ProjectListItem key={key} projectId={key} />
         ))}
       </ul>
     )
