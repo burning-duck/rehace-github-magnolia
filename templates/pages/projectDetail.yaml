@@ -1,0 +1,18 @@
+title: ReHaCe - GitHub Project Detail Page
+templateScript: /rehace-github-magnolia/templates/pages/projectMain.ftl
+renderType: freemarker
+dialog: rehace-github-magnolia:pages/projectDetail
+visible: true
+areas:
+  headerArea:
+    availableComponents:
+      pageHeader:
+        id: rehace-github-magnolia:components/pageHeader
+  mainArea:
+    availableComponents:
+      projectMetric:
+        id: rehace-github-magnolia:components/projectMetric
+  metricsArea:
+    availableComponents:
+      projectMetric:
+        id: rehace-github-magnolia:components/projectMetric

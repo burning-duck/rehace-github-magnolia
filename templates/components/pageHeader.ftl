@@ -7,7 +7,7 @@
 [#assign inverted = content.inverted?has_content?then(content.inverted?then("true", "false"), "false")]
 
 
-<div data-component="RemaceProjectHeader"
+<div data-component="GithubProjectHeader"
      data-prop-title="${title}"
      data-prop-description="${description}"
      data-prop-overwrite="${overwrite}"

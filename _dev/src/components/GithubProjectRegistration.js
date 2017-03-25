@@ -8,7 +8,7 @@ import {signal} from 'cerebral/tags'
  * The component has no visual representation.
  * Just used to inform the state about a a project.
  */
-class RemaceProjectRegistration extends React.Component {
+class GithubProjectRegistration extends React.Component {
   componentDidMount () {
     const {register, owner, repo} = this.props
     register({owner, repo})
@@ -18,8 +18,8 @@ class RemaceProjectRegistration extends React.Component {
     return null
   }
 }
-RemaceProjectRegistration.displayName = 'RemaceProjectRegistration'
-RemaceProjectRegistration.propTypes = {
+GithubProjectRegistration.displayName = 'GithubProjectRegistration'
+GithubProjectRegistration.propTypes = {
   register: React.PropTypes.func.isRequired,
   owner: React.PropTypes.string.isRequired,
   repo: React.PropTypes.string.isRequired
@@ -32,7 +32,7 @@ const StatefullProjectRegistration = connect(
   {
     register: signal`projectRegistered`
   },
-  RemaceProjectRegistration
+  GithubProjectRegistration
 )
 StatefullProjectRegistration.displayName = 'StatefullProjectRegistration'
 

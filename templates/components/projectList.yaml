@@ -1,0 +1,4 @@
+title: projectList
+renderType: freemarker
+templateScript: /rehace-github-magnolia/templates/components/projectList.ftl
+dialog: rehace-github-magnolia:components/projectList
