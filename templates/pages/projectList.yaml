@@ -5,6 +5,14 @@ dialog: rehace-github-magnolia:pages/projectList
 visible: true
 areas:
   pageNavigationArea:
+    renderType: freemarker
+    templateScript: /rehace-github-magnolia/templates/areas/pageNavigationArea.ftl
+    type: noComponent
+  headerArea:
+    availableComponents:
+      pageHeader:
+        id: rehace-github-magnolia:components/pageHeader
+  mainArea:
     availableComponents:
       projectList:
         id: rehace-github-magnolia:components/projectList
