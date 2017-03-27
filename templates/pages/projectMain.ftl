@@ -33,10 +33,10 @@
   <div class="ui vertical center aligned segment">
   </div>
   <div class="ui grid">
-    <div class="red four wide column">
+    <div class="grey four wide column">
       [@cms.area name="pageNavigationArea" /]
     </div>
-    <div class="green twelve wide column">
+    <div class="twelve wide column">
     [#-- Header --]
       <div class="ui text container">
         [@cms.area name="headerArea"/]
@@ -45,18 +45,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-[#-- Check if this page is a detail page and register the project --]
-[#assign currentPageTemplate = cmsfn.metaData(content, "mgnl:template")]
-[#if currentPageTemplate?? && currentPageTemplate == "rehace-github-magnolia:pages/projectDetail"]
-<div data-component="GithubProjectRegistration"
-     data-prop-owner="${content.owner!}"
-     data-prop-repo="${content.repo!}">
-</div>
-[/#if]
 
 [#-- Get the list of child pages which are project details and register them --]
 [#list cmsfn.contentListByTemplateId(cmsfn.asJCRNode(content), "rehace-github-magnolia:pages/projectDetail") as child ]

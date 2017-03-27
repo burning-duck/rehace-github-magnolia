@@ -4,13 +4,13 @@ form:
     - name: tabMain
       label: Main
       fields:
-
         - name: title
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          required: true
           label: Title
-
         - name: description
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          required: true
           label: Description
 
 actions:

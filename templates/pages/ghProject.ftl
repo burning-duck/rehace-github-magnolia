@@ -44,11 +44,14 @@
 [@cms.area name="mainArea"/]
 </div>
 
-[#-- Register project data in state --]
-<div data-component="GIthubProjectRegistration"
+[#-- Check if this page is a detail page and register the project --]
+[#assign currentPageTemplate = cmsfn.metaData(content, "mgnl:template")]
+[#if currentPageTemplate?? && currentPageTemplate == "rehace-github-magnolia:pages/projectDetail"]
+<div data-component="GithubProjectRegistration"
      data-prop-owner="${content.owner!}"
      data-prop-repo="${content.repo!}">
 </div>
+[/#if]
 <script src="${ctx.contextPath}/.resources/rehace-github-magnolia/webresources/rehace-github-magnolia-bundle.js"></script>
 </body>
 </html>

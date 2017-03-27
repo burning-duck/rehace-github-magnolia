@@ -6,7 +6,7 @@ visible: true
 areas:
   pageNavigationArea:
     renderType: freemarker
-    templateScript: /rehace-github-magnolia/templates/areas/pageNavigationArea.ftl
+    templateScript: /rehace-github-magnolia/templates/pages/areas/pageNavigationArea.ftl
     type: noComponent
   headerArea:
     availableComponents:
