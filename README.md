@@ -7,8 +7,13 @@ A sample of how to integrate single-page technologies in a multi-page CMS.
 
 
 ## Features
+##### ReHaCe github magnolia project list
 ![rehace-github-magnolia-project-page](rehace-github-magnolia-project-page.gif)
+
+##### Project list with the cerebral debugger
 ![rehace-github-magnolia-project-page](rehace-github-magnolia-cerebral-debugger.gif)
+
+##### Magnolia author, create the project list
 ![rehace-github-magnolia-project-page](rehace-github-magnolia.gif)
 <!--
 Provide a list of the key features this module provides for content
