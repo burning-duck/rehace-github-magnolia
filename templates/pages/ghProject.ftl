@@ -21,10 +21,13 @@
   <div class="item">
     <img class="logo" src="${ctx.contextPath}/.resources/rehace-github-magnolia/webresources/public/assets/burning-duck-logo.png">
   </div>
-    <a href="#" class="header item">
-      ReMaCe
-    </a>
-    <a href="#" class="item">Home</a>
+  [#assign currentNode = cmsfn.asJCRNode(content)]
+  [#assign rootPage = cmsfn.root(currentNode, "mgnl:page")!]
+  [#if rootPage?has_content]
+    <a class="header item" href="${cmsfn.link(rootPage)}">${cmsfn.asContentMap(rootPage).title!}</a>
+  [#else]
+    <a class="header item" href="${cmsfn.link(content)}">${content.title!}</a>
+  [/#if]
 </div>
 [#-- Content --]
 <div class="ui main text container">
