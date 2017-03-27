@@ -19,12 +19,10 @@ const ProjectListItem = connect(
       image = repo['owner']['avatar_url']
     }
     return (
-      <div className='item'>
-        <div onClick={() => select({id: projectId})}>
-          <img className='ui avatar image' src={image} />
-          <div className='content'>
-            <div className='header'>{repo['full_name']}</div>
-          </div>
+      <div className='item' onClick={() => select({id: projectId})}>
+        <img className='ui avatar image' src={image} />
+        <div className='content'>
+          <div className='header'>{repo['full_name']}</div>
         </div>
       </div>
     )
