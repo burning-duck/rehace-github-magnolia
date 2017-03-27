@@ -37,12 +37,13 @@
       [@cms.area name="pageNavigationArea" /]
     </div>
     <div class="twelve wide column">
-    [#-- Header --]
-      <div class="ui text container">
-        [@cms.area name="headerArea"/]
-      </div>
       [@cms.area name="mainArea"/]
     </div>
+  </div>
+</div>
+<div class="ui grid">
+  <div class="ui text container">
+    [@cms.area name="headerArea"/]
   </div>
 </div>
 
