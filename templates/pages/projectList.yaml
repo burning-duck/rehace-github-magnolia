@@ -9,10 +9,12 @@ areas:
     templateScript: /rehace-github-magnolia/templates/pages/areas/pageNavigationArea.ftl
     type: noComponent
   headerArea:
+    type: single
     availableComponents:
       pageHeader:
         id: rehace-github-magnolia:components/pageHeader
   mainArea:
+    type: single
     availableComponents:
       projectList:
         id: rehace-github-magnolia:components/projectList
