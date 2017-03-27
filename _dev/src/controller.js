@@ -4,6 +4,7 @@ import Devtools from 'cerebral/devtools'
 
 // Signals
 import projectRegistered from './signals/projectRegistered'
+import projectSelected from './signals/projectSelected'
 
 /**
  * The Cerebral Controller.
@@ -19,7 +20,8 @@ export default Controller({
     selected: null
   },
   signals: {
-    projectRegistered: projectRegistered
+    projectRegistered: projectRegistered,
+    projectSelected: projectSelected
   },
   providers: [
     HttpProvider({

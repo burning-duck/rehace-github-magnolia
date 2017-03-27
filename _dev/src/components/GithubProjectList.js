@@ -1,14 +1,16 @@
 import React from 'react'
 import {connect} from 'cerebral/react'
-import {state, props} from 'cerebral/tags'
+import {state, props, signal} from 'cerebral/tags'
 
 import availableRepos from '../computed/availableRepos'
 
 const ProjectListItem = connect(
   {
-    repo: state`repos.${props`projectId`}`
+    repo: state`repos.${props`projectId`}`,
+    projectId: props`projectId`,
+    select: signal`projectSelected`
   },
-  ({repo}) => {
+  ({repo, projectId, select}) => {
     if (!repo) {
       return null
     }
@@ -18,9 +20,11 @@ const ProjectListItem = connect(
     }
     return (
       <div className='item'>
-        <img className='ui avatar image' src={image} />
-        <div className='content'>
-          <div className='header'>{repo['full_name']}</div>
+        <div onClick={() => select({id: projectId})}>
+          <img className='ui avatar image' src={image} />
+          <div className='content'>
+            <div className='header'>{repo['full_name']}</div>
+          </div>
         </div>
       </div>
     )
@@ -39,7 +43,7 @@ const GithubProjectList = connect(
         <h4>{description}</h4>
         <div className='ui middle aligned selection list'>
           {repos.map((key) => (
-            <ProjectListItem key={key} projectId={key}/>
+            <ProjectListItem key={key} projectId={key} />
             )
           )}
         </div>
