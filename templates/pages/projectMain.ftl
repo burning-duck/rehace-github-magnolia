@@ -27,13 +27,12 @@
     <a class="header item" href="${cmsfn.link(content)}">${content.title!}</a>
   [/#if]
 </div>
-
+<div class="ui vertical center aligned segment">
+</div>
 [#-- Content --]
 <div class="ui main text container segment">
-  <div class="ui vertical center aligned segment">
-  </div>
   <div class="ui grid">
-    <div class="grey four wide column">
+    <div class="black four wide column">
       [@cms.area name="pageNavigationArea" /]
     </div>
     <div class="twelve wide column">
@@ -41,9 +40,12 @@
     </div>
   </div>
 </div>
-<div class="ui grid">
-  <div class="ui text container">
-    [@cms.area name="headerArea"/]
+<div class="ui main text container segment">
+  <div class="ui grid">
+    <div class="ui text container">
+      <h3>Selected project:</h3>
+      [@cms.area name="headerArea"/]
+    </div>
   </div>
 </div>
 
