@@ -1,2 +1,4 @@
-<div data-component="GithubProjectList">
+<div data-component="GithubProjectList"
+     data-prop-title="${content.title}"
+     data-prop-description="${content.description}" >
 </div>

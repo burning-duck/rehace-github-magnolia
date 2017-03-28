@@ -1,5 +1,5 @@
 title: ReHaCe - GitHub Project Detail Page
-templateScript: /rehace-github-magnolia/templates/pages/projectMain.ftl
+templateScript: /rehace-github-magnolia/templates/pages/ghProject.ftl
 renderType: freemarker
 dialog: rehace-github-magnolia:pages/projectDetail
 visible: true

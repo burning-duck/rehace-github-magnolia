@@ -19,44 +19,35 @@
     <img class="logo"
          src="${ctx.contextPath}/.resources/rehace-github-magnolia/webresources/public/assets/burning-duck-logo.png">
   </div>
-  <a href="#" class="header item">
-    ReMaCe
-  </a>
-  <a href="#" class="item">Home</a>
+  [#assign currentNode = cmsfn.asJCRNode(content)]
+  [#assign rootPage = cmsfn.root(currentNode, "mgnl:page")!]
+  [#if rootPage?has_content]
+    <a class="header item" href="${cmsfn.link(rootPage)}">${rootPage.title!}</a>
+  [#else]
+    <a class="header item" href="${cmsfn.link(content)}">${content.title!}</a>
+  [/#if]
 </div>
-
+<div class="ui vertical center aligned segment">
+</div>
 [#-- Content --]
-<div class="ui main text container">
-  <div class="ui vertical center aligned segment">
-  </div>
+<div class="ui main text container segment">
   <div class="ui grid">
-    <div class="red four wide column">
-      <p>NAV</p>
+    <div class="black four wide column">
       [@cms.area name="pageNavigationArea" /]
     </div>
-    <div class="green twelve wide column">
-    [#-- Header --]
-      <div class="ui text container">
-      [@cms.area name="headerArea"/]
-      </div>
-      <p>CONTENT</p>
-    [@cms.area name="metricsArea"/]
-    [@cms.area name="mainArea"/]
+    <div class="twelve wide column">
+      [@cms.area name="mainArea"/]
     </div>
   </div>
 </div>
-
-
-
-
-[#-- Check if this page is a detail page and register the project --]
-[#assign currentPageTemplate = cmsfn.metaData(content, "mgnl:template")]
-[#if currentPageTemplate?? && currentPageTemplate == "rehace-github-magnolia:pages/projectDetail"]
-<div data-component="GithubProjectRegistration"
-     data-prop-owner="${content.owner!}"
-     data-prop-repo="${content.repo!}">
+<div class="ui main text container segment">
+  <div class="ui grid">
+    <div class="ui text container">
+      <h3>Selected project:</h3>
+      [@cms.area name="headerArea"/]
+    </div>
+  </div>
 </div>
-[/#if]
 
 [#-- Get the list of child pages which are project details and register them --]
 [#list cmsfn.contentListByTemplateId(cmsfn.asJCRNode(content), "rehace-github-magnolia:pages/projectDetail") as child ]
