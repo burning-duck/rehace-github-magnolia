@@ -26,8 +26,7 @@ component dialog.
 ## Usage
 
 ## Demo
-To see a page demonstrating this components, open the Pages app in Magnolia AdminCentral and import the file 
-_dev/demos/website.rehace-projects.xml (Import it directly at the root of the tree to see an example of the included css styling.)
+To see a page demonstrating this components, open the Pages app in Magnolia AdminCentral and import the file _dev/demos/website.rehace-projects.xml (Import it directly at the root of the tree to see an example of the included css styling.)
 
 ### npm run
 
