@@ -5,3 +5,4 @@ _dev/
 yarn.lock
 .idea
 docs/
+.travis.yml
