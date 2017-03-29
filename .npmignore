@@ -4,4 +4,4 @@ _dev/
 .eslintrc.json
 yarn.lock
 .idea
-
+docs/
