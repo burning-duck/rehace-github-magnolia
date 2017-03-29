@@ -118,6 +118,9 @@ https://docs.magnolia-cms.com
 - Peter Höffling
 - Jan Rösler
 
+## Join us
+[https://discord.gg/5KGSrfd](discord)
+
 
 [travis-image]: https://img.shields.io/travis/burning-duck/rehace-github-magnolia.svg?style=flat
 [travis-url]: https://travis-ci.org/burning-duck/rehace-github-magnolia
