@@ -33,13 +33,13 @@ This is just an example how theses stuff can make something bigger.
 
 ## Features
 ##### ReHaCe github magnolia project list
-![rehace-github-magnolia-project-page](rehace-github-magnolia-project-page.gif)
+![rehace-github-magnolia-project-page](docs/rehace-github-magnolia-project-page.gif)
 
 ##### Project list with the cerebral debugger
-![rehace-github-magnolia-project-page](rehace-github-magnolia-cerebral-debugger.gif)
+![rehace-github-magnolia-project-page](docs/rehace-github-magnolia-cerebral-debugger.gif)
 
 ##### Magnolia author, create the project list
-![rehace-github-magnolia-project-page](rehace-github-magnolia.gif)
+![rehace-github-magnolia-project-page](docs/rehace-github-magnolia.gif)
 <!--
 Provide a list of the key features this module provides for content
 authors, or whoever the primary user is. For a component template,
@@ -50,6 +50,8 @@ component dialog.
 
 ## Usage
 
+## Demo
+To see a page demonstrating this components, open the Pages app in Magnolia AdminCentral and import the file _dev/demos/website.rehace-projects.xml (Import it directly at the root of the tree to see an example of the included css styling.)
 
 
 ## Development
