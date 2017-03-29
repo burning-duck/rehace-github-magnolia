@@ -27,6 +27,9 @@ In this case it is the Magnolia CMS with his nice page editing and light modules
 
 
 Our goal was it to get this two worlds together.
+So you add a Magnolia component to a page and add options through the dialog.
+In the template the react component get this options and render.
+All react components on the page share the same state and can respond on changes.
 
  
 
@@ -76,7 +79,6 @@ const projectRegistered = [
 ![rehace-github-magnolia-project-page](docs/rehace-github-magnolia.gif)
 
 
-## Usage
 
 ## Demo
 To see a page demonstrating this components, open the Pages app in Magnolia AdminCentral and import the file _dev/demos/website.rehace-projects.xml (Import it directly at the root of the tree to see an example of the included css styling.)
