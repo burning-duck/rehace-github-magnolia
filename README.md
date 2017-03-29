@@ -1,6 +1,31 @@
 # ReHaCe - Github repository components as magnolia light module.
 
-A sample of how to integrate single-page technologies in a multi-page CMS.
+React - Habitat - Cerebral === ReHaCe
+
+- Create Magnolia pages enriched with data from your favorite Github repositories.
+- Use React components from server side rendered templates
+- Connect your components to a single state.
+- Let your authors choose which React components to show on the page.
+- Turn any React component into a Magnolia component.
+- Use a single state tree to kepp all components in sync.
+
+## Whats inside?
+
+ReHaCe does not do anything really new.
+We just combine a set of existing technologies and turn them into something great.
+This is just an example how theses stuff can make something bigger.
+
+
+- React - The view.
+- Cerebral -  The controller
+- Habitat - Attach React to the DOM.
+- Magnolia 
+
+
+### What can ReHaCe do?
+ It connects your React components to a single state tree.   
+
+
  
 [![Build status][travis-image]][travis-url]
  
@@ -25,6 +50,9 @@ component dialog.
 
 ## Usage
 
+
+
+## Development
 
 ### npm run
 
