@@ -22,15 +22,20 @@ If youre creating a React App, the _default_ way is to create a root component a
 This is great for single page apps, as you have the full controll in your components.
 
 
+As an author you use a CMS to have a nice ui/ux to manage your sites and content.
+In this case it is the Magnolia CMS with his nice page editing and light modules.
 
 
+Our goal was it to get this two worlds together.
+
+ 
 
 In this demo we connect to the Github API to fetch some repository data.
 The basic flow is:
 
 - Create a project page in Magnolia with owner and repository name.
 - The page template instantiates the React component:
-```
+```html
 <div data-component="GithubProjectRegistration"
      data-prop-owner="${content.owner!}"
      data-prop-repo="${content.repo!}">
@@ -38,7 +43,7 @@ The basic flow is:
 ```
 - The component triggers the signal `projectRegistered`.
 - The signal fetches the repository data from github and stores the result in the state.
-```js
+```javascript
 const projectRegistered = [
   createProjectEntry, {
     created: [
@@ -119,9 +124,9 @@ https://docs.magnolia-cms.com
 - Jan Rösler
 
 ## Join us on
-[Discord](https://discord.gg/5KGSrfd)
-[burning-duck.github.io](https://burning-duck.github.io/) (WIP)
-burning.duck.org@gmail.com
+- [Discord](https://discord.gg/5KGSrfd)
+- [burning-duck.github.io](https://burning-duck.github.io/) (WIP)
+- burning.duck.org@gmail.com
 
 
 [travis-image]: https://img.shields.io/travis/burning-duck/rehace-github-magnolia.svg?style=flat
