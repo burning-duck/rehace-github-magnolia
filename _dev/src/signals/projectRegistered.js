@@ -55,11 +55,10 @@ const setProjectAsSelectedIfFirst = ({state, props}) => {
   }
 }
 
-// console.log actions
-const dlog = (message) => (ctx) => console.log(message, ctx)
-const derror = (message) => (ctx) => console.error(message, ctx)
+const logError = (message) => (ctx) => console.error(message, ctx)
+const noop = () => {}
 
-export default [
+const projectRegistered = [
   createProjectEntry, {
     created: [
       fetchRepoData, {
@@ -67,10 +66,12 @@ export default [
           saveRepoData,
           setProjectAsSelectedIfFirst
         ],
-        error: [derror('Could not fecth repo data.')]
+        error: [logError('Could not fecth repo data.')]
       }
     ],
-    exists: [dlog('exists')],
-    error: [derror('Could not register project')]
+    exists: [noop],
+    error: [logError('Could not register project')]
   }
 ]
+
+export default projectRegistered

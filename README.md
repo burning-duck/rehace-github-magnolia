@@ -1,12 +1,66 @@
 # ReHaCe - Github repository components as magnolia light module.
-
-A sample of how to integrate single-page technologies in a multi-page CMS.
  
 [![Build status][travis-image]][travis-url]
- 
+
+
+React - Habitat - Cerebral === ReHaCe
+
+- Create Magnolia pages enriched with data from your favorite Github repositories.
+- Use React components from server side rendered templates.
+- Connect your components to a single state.
+- Let your authors choose which React components to show on the page.
+- Turn any React component into a Magnolia component.
+
+## Whats inside?
+
+- React - The view.
+- Cerebral -  The controller.
+- Habitat - Attach React to the DOM.
+- Magnolia - The CMS.
+
+If youre creating a React App, the _default_ way is to create a root component and render the whole app in the page.
+This is great for single page apps, as you have the full controll in your components.
+
+
+
+
+
+In this demo we connect to the Github API to fetch some repository data.
+The basic flow is:
+
+- Create a project page in Magnolia with owner and repository name.
+- The page template instantiates the React component:
+```
+<div data-component="GithubProjectRegistration"
+     data-prop-owner="${content.owner!}"
+     data-prop-repo="${content.repo!}">
+</div>
+```
+- The component triggers the signal `projectRegistered`.
+- The signal fetches the repository data from github and stores the result in the state.
+```js
+const projectRegistered = [
+  createProjectEntry, {
+    created: [
+      fetchRepoData, {
+        success: [
+          saveRepoData,
+          setProjectAsSelectedIfFirst
+        ],
+        error: [logError('Could not fecth repo data.')]
+      }
+    ],
+    exists: [noop],
+    error: [logError('Could not register project')]
+  }
+]
+```
+- The state now contains the repository data.
+- Any component on the page can connect to the state and render the data.
 
 
 ## Features
+
 ##### ReHaCe github magnolia project list
 ![rehace-github-magnolia-project-page](docs/rehace-github-magnolia-project-page.gif)
 
@@ -15,18 +69,15 @@ A sample of how to integrate single-page technologies in a multi-page CMS.
 
 ##### Magnolia author, create the project list
 ![rehace-github-magnolia-project-page](docs/rehace-github-magnolia.gif)
-<!--
-Provide a list of the key features this module provides for content
-authors, or whoever the primary user is. For a component template,
-consider providing screenshots of the rendered component and the
-component dialog.
--->
 
 
 ## Usage
 
 ## Demo
 To see a page demonstrating this components, open the Pages app in Magnolia AdminCentral and import the file _dev/demos/website.rehace-projects.xml (Import it directly at the root of the tree to see an example of the included css styling.)
+
+
+## Development
 
 ### npm run
 
@@ -35,7 +86,7 @@ npm run start
 ```
 - clean
 - Watch all files in `_dev` for changes.
-- Saves build bundles in `webreources`
+- Saves build bundles in `webresources`
 - Start a livereload server on default port 35729
 
 
@@ -53,20 +104,6 @@ npm run clean
 - Deletes `webresources`
 
 
-<!--
-Provide details about how a developer can make the component template,
-or other features provided by the light module, available to content
-authors.
-
-This can include any special instructions about webresources or
-availability. This could include instructions on 3rd party dependencies
-such as jquery.
-
-Describe how a template can be configured with parameters if
-applicable.
--->
-
-
 ## Information on Magnolia CMS
 
 This directory is a Magnolia 'light module'.
@@ -74,9 +111,12 @@ https://docs.magnolia-cms.com
 
 
 ## License
-
+ MIT
 
 ## Contributors
+
+- Peter Höffling
+- Jan Rösler
 
 
 [travis-image]: https://img.shields.io/travis/burning-duck/rehace-github-magnolia.svg?style=flat
