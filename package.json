@@ -28,8 +28,8 @@
     "babel-loader": "^6.4.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.23.0",
-    "cerebral": "2.0.0-b-alpha.39c2c242",
-    "cerebral-provider-http": "1.0.0-b-alpha.39c2c242",
+    "cerebral": "2.0.0-b-alpha.133f9d17",
+    "cerebral-provider-http": "1.0.0-b-alpha.133f9d17",
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^3.2.3",
     "css-loader": "^0.27.1",
@@ -49,11 +49,11 @@
     "react-habitat": "^0.4.2",
     "react-number-easing": "^0.0.4",
     "rimraf": "^2.6.1",
+    "semantic-ui-css": "^2.2.9",
+    "semantic-ui-react": "^0.67.1",
     "style-loader": "^0.13.2",
     "webpack": "^2.2.1",
-    "webpack-livereload-plugin": "^0.10.0",
-    "semantic-ui-css": "^2.2.9",
-    "semantic-ui-react": "^0.67.1"
+    "webpack-livereload-plugin": "^0.10.0"
   },
   "scripts": {
     "prepublishOnly": "npm-run-all build",
@@ -64,5 +64,8 @@
     "lint": "eslint _dev/src/**",
     "build:webpack": "cross-env NODE_ENV=production webpack --optimize-minimize  --config=_dev/webpack.config.js",
     "start:webpack": "cross-env NODE_ENV=development webpack --config=_dev/webpack.config.js --watch"
+  },
+  "dependencies": {
+    "rehace": "^0.1.0"
   }
 }
