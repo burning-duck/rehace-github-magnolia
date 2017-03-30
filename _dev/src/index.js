@@ -1,4 +1,4 @@
-import Rehace from './rehace'
+import Rehace from 'rehace'
 import controller from './controller'
 
 // Global styles
