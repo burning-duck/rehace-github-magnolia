@@ -13,10 +13,11 @@ React - Habitat - Cerebral === ReHaCe
 
 ## Whats inside?
 
-- React - The view.
-- Cerebral -  The controller.
-- Habitat - Attach React to the DOM.
-- Magnolia - The CMS.
+- [React](https://github.com/facebook/react) - The view.
+- [Cerebral](https://github.com/cerebral/cerebral) -  The state controller.
+- [React-Habitat](https://github.com/DeloitteDigitalAPAC/react-habitat) - Attach React to the DOM.
+- [ReHaCe](https://github.com/burning-duck/rehace) - Connect all the stuff.
+- [Magnolia](https://www.magnolia-cms.com/) - The CMS.
 
 If youre creating a React App, the _default_ way is to create a root component and render the whole app in the page.
 This is great for single page apps, as you have the full controll in your components.
